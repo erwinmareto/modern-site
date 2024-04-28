@@ -15,7 +15,11 @@ const PricingList = () => {
             {item.description}
           </p>
 
-          <div className="flex items-center h-[5.5rem] mb-6">
+          <div
+            className={`flex items-center h-[5.5rem] mb-6 ${
+              !item.price && "max-lg:hidden"
+            }`}
+          >
             {item.price && (
               <>
                 <div className="h3">$</div>
